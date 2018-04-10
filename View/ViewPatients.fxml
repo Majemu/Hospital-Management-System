@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-image: C:\Users\User\Documents\NetBeansProjects\Hospital\src\Images\ho.jpg;" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Hos.Controller.ViewPatientsController">
+   <children>
+      <AnchorPane layoutX="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="890.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="113.0" layoutY="25.0" prefHeight="71.0" prefWidth="887.0" style="-fx-background-color: #33ccff;">
+               <children>
+                  <Label layoutX="23.0" layoutY="13.0" text="View Patients" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fx:id="homeBtn" fill="WHITE" glyphName="HOME" layoutX="723.0" layoutY="52.0" onMouseClicked="#goAdminPort" size="50.0" wrappingWidth="46.42856979370117" />
+                  <FontAwesomeIconView fx:id="logoutBtn" fill="WHITE" glyphName="SIGN_OUT" layoutX="803.0" layoutY="52.0" onMouseClicked="#logout" size="50.0" />
+               </children>
+            </Pane>
+            <Circle fill="#0086b3" layoutX="66.0" layoutY="60.0" radius="60.0" stroke="#0086b3" strokeType="INSIDE" />
+            <FontAwesomeIconView fill="WHITE" glyphName="HEARTBEAT" layoutX="21.0" layoutY="94.0" size="90.0" />
+            <JFXButton fx:id="addPatientBtn" layoutX="133.0" layoutY="-1.0" onAction="#addPatient" prefHeight="25.0" prefWidth="99.0" text="Add Patient" />
+            <JFXButton fx:id="deletePatientBtn" layoutX="232.0" layoutY="-1.0" onAction="#deletePatient" prefHeight="25.0" prefWidth="99.0" text="Delete Patient" />
+            <JFXButton fx:id="updatePatientBtn" layoutX="331.0" layoutY="-1.0" onAction="#updatePatient" prefHeight="25.0" prefWidth="99.0" text="Update Patient" />
+            <JFXButton fx:id="searchPatientBtn" layoutX="430.0" layoutY="-1.0" onAction="#searchPatient" prefHeight="25.0" prefWidth="99.0" text="Search Patient" />
+            <TableView fx:id="patientsList" layoutX="17.0" layoutY="148.0" prefHeight="441.0" prefWidth="589.0">
+              <columns>
+                <TableColumn fx:id="_patID" prefWidth="105.0" text="Patient ID" />
+                  <TableColumn fx:id="_fname" prefWidth="110.0" text="First Name" />
+                  <TableColumn fx:id="_lname" prefWidth="119.0" text="Last Name" />
+                  <TableColumn fx:id="_address" prefWidth="254.0" text="Address" />
+              </columns>
+            </TableView>
+            <Pane layoutX="636.0" layoutY="137.0" prefHeight="463.0" prefWidth="343.0" style="-fx-background-color: white;">
+               <children>
+                  <VBox layoutX="36.0" spacing="15.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label text="Name: " textFill="#0086b3">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblname" text="Arewa Arewa" textFill="#33ccff">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <Label text="PatientID: " textFill="#0086b3">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblpatid" text="HMS/2017/001" textFill="#33ccff">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label text="Address: " textFill="#0086b3">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbladdress" text="1, Obafemi Awolowo way, Ikeja" textFill="#33ccff">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label text="City: " textFill="#0086b3">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblcity" text="Lagos" textFill="#33ccff">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="110.0">
+                           <children>
+                              <Label text="Age: " textFill="#0086b3">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblage" text="28" textFill="#33ccff">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label text="Gender: " textFill="#0086b3">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblgender" text="Female" textFill="#33ccff">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label text="Phone Number: " textFill="#0086b3">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblpnum" text="08073442828" textFill="#33ccff">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label text="Marital Status: " textFill="#0086b3">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblmstat" text="Single" textFill="#33ccff">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label text="Patient Type: " textFill="#0086b3">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblptype" text="Indoor" textFill="#33ccff">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label text="Blood Group: " textFill="#0086b3">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblbgroup" text="A" textFill="#33ccff">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label text="Ward Number: " textFill="#0086b3">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblwnum" text="6" textFill="#33ccff">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label text="Bed Number: " textFill="#0086b3">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblbnum" text="2" textFill="#33ccff">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <JFXButton layoutX="529.0" layoutY="-1.0" prefHeight="25.0" prefWidth="99.0" text="View Patient" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
